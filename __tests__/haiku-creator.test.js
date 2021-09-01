@@ -5,6 +5,7 @@ describe('Haiku', () => {
   test('Should create a new poem to test', () => {
     const newHaiku = new Haiku("this is the first line");
     expect(newHaiku.line1).toEqual("this is the first line");
+    // expect(newHaiku.line2).toEqual("second line");
   });
 
   test('A word has more than one syllable', () => {
@@ -20,6 +21,12 @@ describe('Haiku', () => {
   test('A word has adjacent vowels, but only counts as one syllable', () => {
     const newHaiku = new Haiku("deepii spaghetti helle caste");
     expect(newHaiku.checkSyl(newHaiku.line1)).toEqual(8);
+  });
+
+  test('Count the number of syllables from each line', () => {
+    const newHaiku = new Haiku("spaghetti helle");
+    let sylOne = (newHaiku.checkSyl(newHaiku.line1));
+    expect(newHaiku.fiveSyl(sylOne)).toEqual(true);
   });
 
   // test('should correctly determine whether three lengths make an isosceles triangle', () => {

@@ -5,27 +5,43 @@ export default class Haiku {
     // this.line3 = line3;
   }
 
-    checkSyl(line) {
-      let words = line.split(" ");
-      const vowels = ["a", "e", "i", "o", "u", "y"];
-      let vowelCount = 0;
+  checkSyl(line) {
+    let words = line.split(" ");
+    const vowels = ["a", "e", "i", "o", "u", "y"];
+    let vowelCount = 0;
 
-      for (let i = 0; i < words.length; i++) {
-        let chars = words[i].split("");
-        for (let n = 0; n < chars.length; n++) {
-          if (vowels.includes(chars[n])) {
-            vowelCount++;
-          }
-          if ((vowels.includes(chars[n])) && (vowels.includes(chars[n + 1]))) {
-            vowelCount --;
-          }
+    for (let i = 0; i < words.length; i++) {
+      let chars = words[i].split("");
+      for (let n = 0; n < chars.length; n++) {
+        if (vowels.includes(chars[n])) {
+          vowelCount++;
         }
-        if ((chars[chars.length -1] === vowels[1]) && (chars[chars.length -2] != "l")) {
-          vowelCount --;
+        if ((vowels.includes(chars[n])) && (vowels.includes(chars[n + 1]))) {
+          vowelCount--;
         }
       }
-      return vowelCount;
+      if ((chars[chars.length - 1] === vowels[1]) && (chars[chars.length - 2] != "l")) {
+        vowelCount--;
+      }
     }
+    return vowelCount;
+  }
+
+  fiveSyl(sylCount) {
+    let isFive = false;
+    if (sylCount === 5) {
+      isFive = true;
+    }
+    return isFive;
+  }
+
+  sevenSyl(sylCount) {
+    let isFive = false;
+    if (sylCount === 7) {
+      isFive = true;
+    }
+    return isFive;
+  }
 }
 
 // iterate over the chars, 
