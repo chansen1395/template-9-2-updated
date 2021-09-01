@@ -30,6 +30,7 @@ export default class Haiku {
     return vowelCount;
   }
 
+  
   checkLines() {
     let isHaiku = false;
     let firstLine = this.checkSyl(this.line1);
@@ -56,18 +57,6 @@ export default class Haiku {
   //   return isFive;
   // }
 }
-
-// iterate over the chars, 
-// if vowels.includes(chars[i]) && vowels.includes(chars[i + 1])
-//    vowelCount --;
-
-
-// syl la ble
-// can dle
-// a ble
-// code
-
-// Spaghetti/involve/aesthetics
 
 
 // if a word ends in "e", subtract one syllable right off the bat:

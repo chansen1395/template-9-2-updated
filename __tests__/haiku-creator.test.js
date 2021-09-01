@@ -54,6 +54,7 @@ describe('Haiku', () => {
   //   expect(newHaiku.checkLines()).toEqual(false);
   // });
 
+  // Not Used, could implement other methods from 
   // test('Count the number of syllables from each line', () => {
   //   const newHaiku = new Haiku("spaghetti helle");
   //   let sylOne = (newHaiku.checkSyl(newHaiku.line1));
