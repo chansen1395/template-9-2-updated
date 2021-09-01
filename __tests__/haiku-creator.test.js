@@ -23,13 +23,13 @@ describe('Haiku', () => {
     expect(newHaiku.checkSyl(newHaiku.line1)).toEqual(8);
   });
 
-  test('If two lines are a Haiku', () => {
-    const newHaiku = new Haiku("spaghetti helle", "spaghetti helle bobby");
+  test('If three lines compose a Haiku', () => {
+    const newHaiku = new Haiku("spaghetti helle", "spaghetti helle bobby", "dog dog dog dog dog");
     expect(newHaiku.checkLines()).toEqual(true);
   });
 
-  test('If two lines are not a Haiku', () => {
-    const newHaiku = new Haiku("spaghetti helle bobby", "test fail");
+  test('If three lines do not compose a Haiku', () => {
+    const newHaiku = new Haiku("spaghetti helle bobby", "test fail", "dog dog dog dog dog");
     expect(newHaiku.checkLines()).toEqual(false);
   });
 
