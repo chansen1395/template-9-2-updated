@@ -9,14 +9,17 @@ export default class Haiku {
       let words = line.split(" ");
       const vowels = ["a", "e", "i", "o", "u", "y"];
       let vowelCount = 0;
-      
+
       for (let i = 0; i < words.length; i++) {
         let chars = words[i].split("");
         console.log(chars[chars.length -1]);
         for (let char of chars) {
           if (vowels.includes(char)) {
             vowelCount++;
-          }
+          } 
+        }
+        if (vowels.includes(chars[i]) && vowels.includes(chars[i + 1])) {
+          vowelCount --;
         }
         if ((chars[chars.length -1] === vowels[1]) && (chars[chars.length -2] != "l")) {
           vowelCount --;
@@ -26,7 +29,9 @@ export default class Haiku {
     }
 }
 
-
+// iterate over the chars, 
+// if vowels.includes(chars[i]) && vowels.includes(chars[i + 1])
+//    vowelCount --;
 
 
 // syl la ble

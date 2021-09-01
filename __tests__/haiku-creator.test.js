@@ -17,6 +17,11 @@ describe('Haiku', () => {
     expect(newHaiku.checkSyl(newHaiku.line1)).toEqual(6);
   });
 
+  test('A word has adjacent vowels, but only counts as one syllable', () => {
+    const newHaiku = new Haiku("aesthetic");
+    expect(newHaiku.checkSyl(newHaiku.line1)).toEqual(3);
+  });
+
   // test('should correctly determine whether three lengths make an isosceles triangle', () => {
   //   const isocTriangle = new Triangle(5,5,7)
   //   expect(isocTriangle.checkType()).toEqual("isosceles triangle");
