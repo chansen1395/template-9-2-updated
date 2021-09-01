@@ -27,21 +27,32 @@ export default class Haiku {
     return vowelCount;
   }
 
-  fiveSyl(sylCount) {
-    let isFive = false;
-    if (sylCount === 5) {
-      isFive = true;
-    }
-    return isFive;
+  checkLines() {
+    let isHaiku = false;
+    let firstLine = this.checkSyl(this.line1);
+    // let secondLine = this.checkSyl(this.line2);
+    // if ((checkSyl(line1)) != 5 || (checkSyl(line2) != 7)) { 
+    // if ((firstLine === 5) && (secondLine === 7)) { 
+    if (firstLine === 5) { 
+      isHaiku = true;
+    } 
+    return isHaiku;
   }
+  // fiveSyl(sylCount) {
+  //   let isFive = false;
+  //   if (sylCount === 5) {
+  //     isFive = true;
+  //   }
+  //   return isFive;
+  // }
 
-  sevenSyl(sylCount) {
-    let isFive = false;
-    if (sylCount === 7) {
-      isFive = true;
-    }
-    return isFive;
-  }
+  // sevenSyl(sylCount) {
+  //   let isFive = false;
+  //   if (sylCount === 7) {
+  //     isFive = true;
+  //   }
+  //   return isFive;
+  // }
 }
 
 // iterate over the chars, 

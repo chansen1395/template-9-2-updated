@@ -23,25 +23,20 @@ describe('Haiku', () => {
     expect(newHaiku.checkSyl(newHaiku.line1)).toEqual(8);
   });
 
-  test('Count the number of syllables from each line', () => {
+  test('If a line is a Haiku', () => {
     const newHaiku = new Haiku("spaghetti helle");
-    let sylOne = (newHaiku.checkSyl(newHaiku.line1));
-    expect(newHaiku.fiveSyl(sylOne)).toEqual(true);
+    expect(newHaiku.checkLines()).toEqual(true);
   });
 
-  // test('should correctly determine whether three lengths make an isosceles triangle', () => {
-  //   const isocTriangle = new Triangle(5,5,7)
-  //   expect(isocTriangle.checkType()).toEqual("isosceles triangle");
-  // });
+  test('If a line is not a Haiku', () => {
+    const newHaiku = new Haiku("spaghetti helle bobby");
+    expect(newHaiku.checkLines()).toEqual(false);
+  });
 
-  // test('should correctly determine whether three lengths make an scalene triangle', () => {
-  //   const scalTriangle = new Triangle(2,3,4)
-  //   expect(scalTriangle.checkType()).toEqual("scalene triangle");
-  // });
-
-  // test('should correctly determine whether three lengths make an equilateral triangle', () => {
-  //   const equiTriangle = new Triangle(5,5,5)
-  //   expect(equiTriangle.checkType()).toEqual("equilateral triangle");
+  // test('Count the number of syllables from each line', () => {
+  //   const newHaiku = new Haiku("spaghetti helle");
+  //   let sylOne = (newHaiku.checkSyl(newHaiku.line1));
+  //   expect(newHaiku.fiveSyl(sylOne)).toEqual(true);
   // });
 
 });
