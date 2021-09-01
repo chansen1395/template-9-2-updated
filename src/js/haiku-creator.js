@@ -1,7 +1,7 @@
 export default class Haiku {
-  constructor(line1) {
+  constructor(line1, line2) {
     this.line1 = line1;
-    // this.line2 = line2;
+    this.line2 = line2;
     // this.line3 = line3;
   }
 
@@ -30,10 +30,8 @@ export default class Haiku {
   checkLines() {
     let isHaiku = false;
     let firstLine = this.checkSyl(this.line1);
-    // let secondLine = this.checkSyl(this.line2);
-    // if ((checkSyl(line1)) != 5 || (checkSyl(line2) != 7)) { 
-    // if ((firstLine === 5) && (secondLine === 7)) { 
-    if (firstLine === 5) { 
+    let secondLine = this.checkSyl(this.line2);
+    if ((firstLine === 5) && (secondLine === 7)) { 
       isHaiku = true;
     } 
     return isHaiku;
