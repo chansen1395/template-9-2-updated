@@ -3,10 +3,13 @@ export default class Haiku {
     this.line1 = line1;
     this.line2 = line2;
     this.line3 = line3;
+    // the reason .trim().replace(/[.,!?]/g, "") cause failures could
+    // be because some tests do not use 3 parameters
   }
-
+  
   checkSyl(line) {
     let words = line.split(" ");
+    console.log("Array of words: " + words);
     const vowels = ["a", "e", "i", "o", "u", "y"];
     let vowelCount = 0;
 
