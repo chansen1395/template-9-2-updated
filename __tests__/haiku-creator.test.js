@@ -7,10 +7,15 @@ describe('Haiku', () => {
     expect(newHaiku.line1).toEqual("this is the first line");
   });
 
-  // test('Line 1 has more than one syllable', () => {
-  //   const newLine1 = new Haiku(line1);
-  //   expect(newLine1.checkType()).toEqual("not a triangle");
-  // });
+  test('A word has more than one syllable', () => {
+    const newHaiku = new Haiku("spaghetti");
+    expect(newHaiku.checkSyl(newHaiku.line1)).toEqual(3);
+  });
+
+  test('A line has more than one word, counts syllables', () => {
+    const newHaiku = new Haiku("spaghetti hello");
+    expect(newHaiku.checkSyl(newHaiku.line1)).toEqual(5);
+  });
 
   // test('should correctly determine whether three lengths make an isosceles triangle', () => {
   //   const isocTriangle = new Triangle(5,5,7)
