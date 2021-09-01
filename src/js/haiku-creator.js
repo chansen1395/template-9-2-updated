@@ -6,28 +6,33 @@ export default class Haiku {
   }
 
     checkSyl(line) {
-      let chars = line.split("");
-      let vowelCount = 0;
+      let words = line.split(" ");
       const vowels = ["a", "e", "i", "o", "u", "y"];
-      for (let char of chars) {
-        if (vowels.includes(char)) {
-          vowelCount++;
+      let vowelCount = 0;
+      
+      for (let i = 0; i < words.length; i++) {
+        let chars = words[i].split("");
+        console.log(chars[chars.length -1]);
+        for (let char of chars) {
+          if (vowels.includes(char)) {
+            vowelCount++;
+          }
+        }
+        if ((chars[chars.length -1] === vowels[1]) && (chars[chars.length -2] != "l")) {
+          vowelCount --;
         }
       }
       return vowelCount;
     }
-//   checkType() {
-//     if ((this.side1 > (this.side2 + this.side3)) || (this.side2 > (this.side1 + this.side3)) || (this.side3 > (this.side1 + this.side2))) {
-//       return "not a triangle";
-//     } else if ((this.side1 !== this.side2) && ((this.side1 !== this.side3)) && ((this.side2 !== this.side3))) {
-//       return "scalene triangle";
-//     }  else if ((this.side1 === this.side2) && (this.side1 === this.side3)) {
-//       return "equilateral triangle";
-//     } else {
-//       return "isosceles triangle";
-//     }
-//   }    
 }
+
+
+
+
+// syl la ble
+// can dle
+// a ble
+// code
 
 // Spaghetti/involve/aesthetics
 

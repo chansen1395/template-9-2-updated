@@ -13,8 +13,8 @@ describe('Haiku', () => {
   });
 
   test('A line has more than one word, counts syllables', () => {
-    const newHaiku = new Haiku("spaghetti hello");
-    expect(newHaiku.checkSyl(newHaiku.line1)).toEqual(5);
+    const newHaiku = new Haiku("spaghetti helle caste");
+    expect(newHaiku.checkSyl(newHaiku.line1)).toEqual(6);
   });
 
   // test('should correctly determine whether three lengths make an isosceles triangle', () => {
