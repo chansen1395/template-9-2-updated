@@ -5,8 +5,8 @@ export default class Haiku {
     // this.line3 = line3;
   }
 
-    checkSyl(word) {
-      let chars = word.split("");
+    checkSyl(line) {
+      let chars = line.split("");
       let vowelCount = 0;
       const vowels = ["a", "e", "i", "o", "u", "y"];
       for (let char of chars) {
@@ -28,6 +28,9 @@ export default class Haiku {
 //     }
 //   }    
 }
+
+// Spaghetti/involve/aesthetics
+
 
 // if a word ends in "e", subtract one syllable right off the bat:
 //   - "[i]nv[o]lv{e}" 3 vowels, -1 for ending in "e" = 2 syll
