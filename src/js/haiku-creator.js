@@ -12,14 +12,15 @@ export default class Haiku {
 
       for (let i = 0; i < words.length; i++) {
         let chars = words[i].split("");
-        console.log(chars[chars.length -1]);
-        for (let char of chars) {
-          if (vowels.includes(char)) {
+        for (let n = 0; n < chars.length; n++) {
+          if (vowels.includes(chars[n])) {
             vowelCount++;
-          } 
-        }
-        if (vowels.includes(chars[i]) && vowels.includes(chars[i + 1])) {
-          vowelCount --;
+          }
+          if ((vowels.includes(chars[n])) && (vowels.includes(chars[n + 1]))) {
+            console.log("letter 1: " + chars[n]);
+            console.log("letter 2: " + chars[n + 1]);
+            vowelCount --;
+          }
         }
         if ((chars[chars.length -1] === vowels[1]) && (chars[chars.length -2] != "l")) {
           vowelCount --;
