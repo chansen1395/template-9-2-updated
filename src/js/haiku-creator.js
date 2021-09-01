@@ -17,8 +17,6 @@ export default class Haiku {
             vowelCount++;
           }
           if ((vowels.includes(chars[n])) && (vowels.includes(chars[n + 1]))) {
-            console.log("letter 1: " + chars[n]);
-            console.log("letter 2: " + chars[n + 1]);
             vowelCount --;
           }
         }

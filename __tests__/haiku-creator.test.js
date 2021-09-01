@@ -18,8 +18,8 @@ describe('Haiku', () => {
   });
 
   test('A word has adjacent vowels, but only counts as one syllable', () => {
-    const newHaiku = new Haiku("deepii");
-    expect(newHaiku.checkSyl(newHaiku.line1)).toEqual(2);
+    const newHaiku = new Haiku("deepii spaghetti helle caste");
+    expect(newHaiku.checkSyl(newHaiku.line1)).toEqual(8);
   });
 
   // test('should correctly determine whether three lengths make an isosceles triangle', () => {
