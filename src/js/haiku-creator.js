@@ -30,7 +30,6 @@ export default class Haiku {
     return vowelCount;
   }
 
-
   checkLines() {
     let isHaiku = false;
     let firstLine = this.checkSyl(this.line1);
@@ -41,6 +40,21 @@ export default class Haiku {
     } 
     return isHaiku;
   }
+
+  // generator(sylLeft)
+  // **sylLeft = 5 or 7;**
+  // newLine = [];
+  // while (sylLeft > 0) {
+  // let words = ["word", "word", "word", "word"];
+  //  i = randomNumFxn max of words.length;
+  //  if (words[i].checkSyl("word") =< sylLeft ) {
+  //    sylLeft -= words[i].checkSyl("word")
+  //    newLine.push(words[i]);
+  //  }
+  //  }
+  // return newLine;
+
+
   // fiveSyl(sylCount) {
   //   let isFive = false;
   //   if (sylCount === 5) {
@@ -66,16 +80,3 @@ export default class Haiku {
 
 // Repo Link:
 // https://github.com/chansen1395/haiku-creator9-1
-
-// generator(sylLeft)
-// **sylLeft = 5 or 7;**
-// newLine = [];
-// while (sylLeft > 0) {
-// let words = ["word", "word", "word", "word"];
-//  i = randomNumFxn max of words.length;
-//  if (words[i].checkSyl("word") =< sylLeft ) {
-//    sylLeft -= words[i].checkSyl("word")
-//    newLine.push(words[i]);
-//  }
-//  }
-// return newLine;
