@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Shape Tracker</title>
+  <title>Haiku Checker</title>
 </head>
+
 <body>
-  <h3>Enter three lengths to determine if they can make a triangle.</h3>
-  <form id="triangle-checker-form">
-    <label for="length1">Enter a number:</label>
-    <input id="length1" type="number">
-    <label for="length2"">Enter a number:</label>
-    <input id="length2" type="number">
-    <label for="length3">Enter a number:</label>
-    <input id="length3" type="number">
+  <h3>Enter three lines to determine if they compose a haiku.</h3>
+  <form id="haiku-checker-form">
+    <label for="line1">Enter your first line: </label>
+    <input id="line1" type="text" required>
+    <hr>
+    <label for="line2">Enter your second line: </label>
+    <input id="line2" type="text" required>
+    <hr>
+    <label for="line3">Enter your third line: </label>
+    <input id="line3" type="text" required>
+    <hr>
     <button type="submit">Submit</button>
   </form>
-  <form id="rectangle-area-form">
-    <label for="rect-length1">Enter a number:</label>
-    <input id="rect-length1" type="number">
-    <label for="rect-length2">Enter a number:</label>
-    <input id="rect-length2" type="number">
-    <button type="submit">Submit</button>
-  </form>
-  <ul id="response"></ul>
-  <ul id="response2"></ul>
+  <div class="card">
+    <ul id="response">
+
+    </ul>
+  </div>
 </body>
+
 </html>

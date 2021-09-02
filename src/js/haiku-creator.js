@@ -30,7 +30,7 @@ export default class Haiku {
     return vowelCount;
   }
 
-  
+
   checkLines() {
     let isHaiku = false;
     let firstLine = this.checkSyl(this.line1);
@@ -63,3 +63,6 @@ export default class Haiku {
 //   - "[i]nv[o]lv{e}" 3 vowels, -1 for ending in "e" = 2 syll
 // for each non-adjacent syllable "w[i]z[a]rd"
 // for each adjacent syllable "[ae]sth[e]t[i]cs"
+
+// Repo Link:
+// https://github.com/chansen1395/haiku-creator9-1
